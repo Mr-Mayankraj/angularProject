@@ -1,0 +1,31 @@
+<div>
+  <mat-icon>shopping_cart</mat-icon>
+  <h1>Order Details</h1>
+</div>
+
+<table class="recent">
+  <thead>
+    <tr>
+      <th>SR NO</th>
+      <th>DATE</th>
+      <th>TRANSACTION DETAILS</th>
+      <th>STATUS</th>
+      <th>AMOUNT</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of pagedData">
+      <td>{{ item.srNo }}</td>
+      <td>{{ item.date }}</td>
+      <td>{{ item.transactionDetails }}</td>
+      <td>{{ item.status }}</td>
+      <td>{{ item.amount }}</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="pagination">
+  <button (click)="prevPage()" [disabled]="currentPage === 1">Previous</button>
+  <span>{{ currentPage }} / {{ totalPages }}</span>
+  <button (click)="nextPage()" [disabled]="currentPage === totalPages">Next</button>
+</div>

@@ -1,0 +1,33 @@
+
+<div class="movie-section">
+  <div *ngFor="let movie of jsonData">
+    <div class="movie_card" id="ave">
+        <div class="info_section">
+          <div class="movie_header">
+            <img class="locandina" [src]="movie.posterUrl " />
+            <h1>{{ movie.title.split(' ').slice(0, 2).join(' ') }}</h1>
+            <h4>{{ movie.actors.split(',').splice(0,2) }}</h4>
+            <span class="minutes">{{ movie.runtime }} </span>
+            <p class="type">{{ movie.genres.join(', ') }}</p>
+          </div>
+          <div class="movie_desc">
+            <p class="text">
+                {{movie.plot.split(' ').slice(0, 15).join(' ')}}
+            </p>
+          </div>
+          <div class="movie_social">
+            <ul>
+              <li><i class="material-icons">share</i></li>
+              <li><i class="material-icons"></i></li>
+              <li><i class="material-icons">chat_bubble</i></li>
+            </ul>
+          </div>
+        </div>
+        <div style="background-image: url('{{ movie.posterUrl }}');" class="blur_back ave_back"></div>
+
+      </div>
+  </div>
+</div>
+
+
+  

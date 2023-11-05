@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="carousel-container">
+        <div class="carousel-slide" *ngFor="let image of images; let i = index"
+            [ngStyle]="{'display': i === currentIndex ? 'block' : 'none'}">
+            <img [src]="image" class="banner-image" alt="Image {{i + 1}}">
+        </div>
+    </div>
+    <!-- card -->
+    <div id="banner">
+        <div id="left">
+            <div class="card-container">
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>live_tv</mat-icon>
+                    <span>Mini TV</span>
+                </div>
+                    
+                    <p>Explore endless entertainment with our Mini TV.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>restaurant_menu</mat-icon>
+                    <span>accessibility</span>
+                    </div>
+                    <p>Savor the flavors of our delightful culinary offerings.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>spa</mat-icon>
+                    <span>Fashion</span>
+                    </div>
+                    <p>Elevate your style with the latest fashion trends.</p>
+                </div>
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>home</mat-icon>
+                    <span>Home</span>
+                    </div>
+                    <p>Turn your house into a cozy and inviting sanctuary.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>spa</mat-icon>
+                    <span>Beauty</span>
+                    </div>
+                    <p>Discover the secrets to radiant and timeless beauty.</p>
+                </div>
+
+                <div class="card">
+                    <div class="card-icon">
+                    <mat-icon>flight</mat-icon>
+                    <span>Travel</span>
+                    </div>
+                    <p>Embark on exciting adventures to captivating destinations.</p>
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div class="right-card">
+                <div class="card-icon">
+                <mat-icon>highlight</mat-icon>
+                <h3>Highlights</h3>
+            </div>
+                <ul>
+                    <li>Embark on unforget journeys</li>
+                    <li>Dive into the world of fashion </li>
+                    <li>Transform your living space</li>
+                    <li>Indulge in a culinary adventure</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
