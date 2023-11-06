@@ -1,25 +1,24 @@
-<div>
-  <mat-icon>shopping_cart</mat-icon>
-  <h1>Order Details</h1>
+<div class="headerMovies">
+  <h1>Movies  details</h1>
 </div>
 
 <table class="recent">
   <thead>
     <tr>
-      <th>SR NO</th>
-      <th>DATE</th>
-      <th>TRANSACTION DETAILS</th>
-      <th>STATUS</th>
-      <th>AMOUNT</th>
+      <th *ngFor="let header of tableHeaders">{{ header }}</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let item of pagedData">
-      <td>{{ item.srNo }}</td>
-      <td>{{ item.date }}</td>
-      <td>{{ item.transactionDetails }}</td>
-      <td>{{ item.status }}</td>
-      <td>{{ item.amount }}</td>
+      <td>{{ item.id}}</td>
+      <td>{{ item.title }}</td>
+      <td>{{ item.year }}</td>
+      <td>{{ item.runtime }}</td>
+      <td>{{ item.geners }}</td>
+      <td>{{ item.director }}</td>
+      <td>{{ item.actors }}</td>
+      <td>{{ item.plot }}</td>
+      <td><img style="width: 80px;height: 100px;" [src]="item.posterUrl"  alt="image"></td>
     </tr>
   </tbody>
 </table>

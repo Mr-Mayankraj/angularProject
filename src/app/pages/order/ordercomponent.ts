@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as jsonData from '../../../assets/order.json';
+import * as jsonData from '../../../assets/data.json';
 
 @Component({
   selector: 'app-order',
@@ -7,15 +7,19 @@ import * as jsonData from '../../../assets/order.json';
   styleUrls: ['./order.component.scss']
 })
 export class orderComponent implements OnInit {
-  jsonData : any = jsonData.orders;
+  jsonData : any = jsonData.movies;
 
   pageSize = 6; // Number of items per page
   pagedData: any[] = [];
   currentPage = 1;
   totalPages: number = 0;
 
+  tableHeaders : any[] = Object.keys(jsonData.movies[0])
+
+
   ngOnInit(): void {
     this.updatePagedData();
+    console.log(this.tableHeaders)
   }
   updatePagedData() {
     const startIndex = (this.currentPage - 1) * this.pageSize;

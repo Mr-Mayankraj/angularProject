@@ -24,21 +24,6 @@
     ],
     "movies": [
         {
-          "id": 2,
-          "title": "The Cotton Club",
-          "year": "1984",
-          "runtime": "127",
-          "genres": [
-            "Crime",
-            "Drama",
-            "Music"
-          ],
-          "director": "Francis Ford Coppola",
-          "actors": "Richard Gere, Gregory Hines, Diane Lane, Lonette McKee",
-          "plot": "The Cotton Club was a famous night club in Harlem. The story follows the people that visited the club, those that ran it, and is peppered with the Jazz music that made it so famous.",
-          "posterUrl": "https://images-na.ssl-images-amazon.com/images/M/MV5BMTU5ODAyNzA4OV5BMl5BanBnXkFtZTcwNzYwNTIzNA@@._V1_SX300.jpg"
-        },
-        {
           "id": 4,
           "title": "Crocodile Dundee",
           "year": "1986",
